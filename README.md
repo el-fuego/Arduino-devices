@@ -28,9 +28,9 @@ TurnOnWhenLower heater(HEATER_PIN, DEMANDED_TEMPERATURE, currentTemperature);
 #### Advantage usage
 ```cpp
 /*
- Use minDifference when you need to on|off your device 
- for maintaining some parameter in specific range by 2 devices
- In this case, your devices will be turned off, if value is close to demanded
+ Use minDifference as 4th argument, when you need to turn ON|OFF your few devices 
+ for maintaining some parameter in specific range
+ In this case, your devices will be turned OFF, if value is close to demanded
 */
 TurnOnWhenHigher airConditioner(AIR_CONDITIONER_PIN, demandedTemperature, temperatureAndHumiditySensor.temperature, TEMPERATURE_RANGE / 2);
 TurnOnWhenLower heater(HEATER_PIN, demandedTemperature, temperatureAndHumiditySensor.temperature, TEMPERATURE_RANGE / 2);
@@ -78,7 +78,7 @@ IntensityControl fanSpeedController(FAN_PIN, speedPercentage, FAN_START_PERCENTA
 /*
  If you are using inverted relay input (LOW pin value for enabling), 
  you can invert device output before initialization 
- also, this works with analog output devices
+ Also, this works with analog output devices
 */
 void setup() {
   myDevice.makeOutputInverted(); # heater, conditioner, fan.. 
