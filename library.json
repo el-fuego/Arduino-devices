@@ -1,0 +1,17 @@
+{
+  "name": "Arduino-devices",
+  "keywords": "devices, sensors, interface, controller, DHT, temperature, humidity, interval, schedule, clock, RTC, joystick, growbox, smarthome, green-house, incubator",
+  "description": "Single interface for reading from sensors and updating devices state for smart home, green-house, growbox, incubator..",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/el-fuego/Arduino-devices.git"
+  },
+  "authors": {
+    "name": "Yuriy Pulyaev",
+    "url": "https://github.com/el-fuego"
+  },
+  "version": "0.1.0",
+  "frameworks": "arduino",
+  "platforms": "*"
+}
