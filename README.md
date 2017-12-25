@@ -32,8 +32,8 @@ TurnOnWhenLower heater(HEATER_PIN, DEMANDED_TEMPERATURE, currentTemperature);
  for maintaining some parameter in specific range
  In this case, your devices will be turned OFF, if value is close to demanded
 */
-TurnOnWhenHigher airConditioner(AIR_CONDITIONER_PIN, demandedTemperature, temperatureAndHumiditySensor.temperature, TEMPERATURE_RANGE / 2);
-TurnOnWhenLower heater(HEATER_PIN, demandedTemperature, temperatureAndHumiditySensor.temperature, TEMPERATURE_RANGE / 2);
+TurnOnWhenHigher airConditioner(AIR_CONDITIONER_PIN, demandedTemperature, currentTemperature, TEMPERATURE_RANGE / 2);
+TurnOnWhenLower heater(HEATER_PIN, demandedTemperature, currentTemperature, TEMPERATURE_RANGE / 2);
 ```
 [full usage example](https://github.com/el-fuego/Arduino-devices/blob/master/examples/temperatureControl/temperatureControl.ino)
 
