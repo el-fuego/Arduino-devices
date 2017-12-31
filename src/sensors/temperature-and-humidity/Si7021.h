@@ -1,19 +1,19 @@
-#ifndef DHT11_SENSOR_H
-#define DHT11_SENSOR_H
+#ifndef Si7021_SENSOR_H
+#define Si7021_SENSOR_H
 
-#include <SimpleDHT.h>
+#include <Adafruit_Si7021.h>
 #include "./BaseDHT.h"
 
 
 /**
 * Temperature and Humidity sensor
 **/
-class DHT11_Sensor: public BaseDHT {
+class Si7021_Sensor: public BaseDHT {
   private:
-    SimpleDHT11 driver;
+    Adafruit_Si7021 driver;
     const unsigned char pin;
   public:
-    DHT11_Sensor(unsigned char _pin);
+    Si7021_Sensor();
     unsigned char humidity;
     unsigned char temperature;
   	void init();

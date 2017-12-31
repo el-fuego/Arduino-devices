@@ -19,6 +19,9 @@
 
 #include "./sensors/joysticks/Analog.h"
 
+#include "./sensors/temperature-and-humidity/BaseDHT.h"
+#include "./sensors/temperature-and-humidity/BME280.h"
 #include "./sensors/temperature-and-humidity/DHT11.h"
+#include "./sensors/temperature-and-humidity/Si7021.h"
 
 #endif;
