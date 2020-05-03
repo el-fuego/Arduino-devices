@@ -16,11 +16,9 @@ class BME280_Sensor: public BaseDHT {
   public:
     BME280_Sensor();
     BME280_Sensor(BME280I2C::I2CAddr _address);
-    unsigned char humidity;
-    unsigned char temperature;
     unsigned char pressure;
-  	void init();
+    void init();
     void update();
 };
 
-#endif;
+#endif

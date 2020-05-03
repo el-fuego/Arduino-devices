@@ -3,6 +3,9 @@
 
 #include "./devices/Device.h"
 
+#include "./devices/outputs/Base.h"
+#include "./devices/outputs/Pin.h"
+
 #include "./devices/analog/IntensityControl.h"
 
 #include "./devices/switch-by-level/BaseLevelSwitch.h"
@@ -23,5 +26,6 @@
 #include "./sensors/temperature-and-humidity/BME280.h"
 #include "./sensors/temperature-and-humidity/DHT11.h"
 #include "./sensors/temperature-and-humidity/Si7021.h"
+#include "./sensors/temperature-and-humidity/Am2320.h"
 
-#endif;
+#endif

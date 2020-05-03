@@ -10,6 +10,16 @@ TimeIntervalSwitch::TimeIntervalSwitch(
      Device(_pin),
       interval(_interval),
        clockSensor(_clockSensor) {};
+
+TimeIntervalSwitch::TimeIntervalSwitch(
+  BaseOutput *_output,
+   unsigned char _pin,
+    TimeInterval &_interval,
+     DS3231_Sensor &_clockSensor
+     ) :
+      Device(_output, _pin),
+       interval(_interval),
+        clockSensor(_clockSensor) {};
     
 void TimeIntervalSwitch::update() {
   unsigned int currentTimeMins = clockSensor.getIntTime();

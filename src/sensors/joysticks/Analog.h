@@ -19,7 +19,7 @@ class AnalogJoystick: public Sensor {
   public:
     AnalogJoystick(unsigned char _pinX, unsigned char _pinY);
     JoystickDirections direction = Center;
-  	void init();
+    void init();
     void update();
 };
 

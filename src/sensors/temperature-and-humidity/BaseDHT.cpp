@@ -6,7 +6,7 @@
 bool BaseDHT::canUpdate() {
   unsigned long currentMillis = millis();
   if (currentMillis < updatedAt) {
-  	updatedAt = 0;
+    updatedAt = 0;
   }
 
   return currentMillis - updatedAt > DHT_UPDATE_INTERVAL;

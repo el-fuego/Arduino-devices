@@ -13,11 +13,11 @@ class IntensityControl: public Device {
     unsigned int previousPercentage = 0;
     const unsigned int rangeStart = 0;
     void writeToPin();
-    unsigned int getPinValue();
+    uint16_t getPinValue();
   public:
-    IntensityControl(unsigned char _pin, unsigned int &_percentage);
     IntensityControl(unsigned char _pin, unsigned int &_percentage, unsigned int _rangeStart);
+    IntensityControl(BaseOutput *_output, unsigned char _pin, unsigned int &_percentage, unsigned int _rangeStart);
     void update();
 };
 
-#endif;
+#endif

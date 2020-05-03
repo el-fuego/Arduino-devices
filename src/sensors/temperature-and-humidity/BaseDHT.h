@@ -1,7 +1,7 @@
 #ifndef BASE_DHT_SENSOR_H
 #define BASE_DHT_SENSOR_H
 
-#include <Arduino.h>;
+#include <Arduino.h>
 #include "../Sensor.h"
 
 
@@ -11,7 +11,11 @@
 class BaseDHT: public Sensor {
   protected:
     unsigned long updatedAt = 0;
-  	bool canUpdate();
+    bool canUpdate();
+  public:
+    unsigned char humidity;
+    unsigned char temperature;
+    unsigned char pressure;
 };
 
-#endif;
+#endif

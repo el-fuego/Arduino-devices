@@ -14,10 +14,8 @@ class DHT11_Sensor: public BaseDHT {
     const unsigned char pin;
   public:
     DHT11_Sensor(unsigned char _pin);
-    unsigned char humidity;
-    unsigned char temperature;
-  	void init();
+    void init();
     void update();
 };
 
-#endif;
+#endif

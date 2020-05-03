@@ -19,7 +19,8 @@ class ScheduleIntervalSwitch: public Device {
     DS3231_Sensor &clockSensor;
   public:
     ScheduleIntervalSwitch(unsigned char _pin, ScheduleInterval &_interval, DS3231_Sensor &_clockSensor);
+    ScheduleIntervalSwitch(BaseOutput *_output, unsigned char _pin, ScheduleInterval &_interval, DS3231_Sensor &_clockSensor);
     void update();
 };
 
-#endif;
+#endif

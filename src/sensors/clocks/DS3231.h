@@ -11,10 +11,10 @@
 class DS3231_Sensor: public Sensor {
   public:
     DateTime dateTime;
-  	void init();
+    void init();
     void update();
     unsigned int getIntTime();
     uint32_t toEpochMinutes();
 };
 
-#endif;
+#endif

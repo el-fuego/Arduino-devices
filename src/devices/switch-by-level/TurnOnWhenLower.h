@@ -14,4 +14,4 @@ class TurnOnWhenLower : public BaseLevelSwitch {
     void update();
 };
 
-#endif;
+#endif

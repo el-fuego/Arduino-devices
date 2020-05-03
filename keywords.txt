@@ -2,36 +2,35 @@
 # Datatypes (KEYWORD1)
 #######################################
 
-ScheduleInterval	KEYWORD1
-TimeInterval	KEYWORD1
-JoystickDirections	KEYWORD1
+ScheduleInterval  KEYWORD1
+TimeInterval  KEYWORD1
+JoystickDirections  KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
 #######################################
 
-Sensor	KEYWORD2
-Device	KEYWORD2
-IntensityControl	KEYWORD2
-BaseLevelSwitch	KEYWORD2
-TurnOnWhenHigher	KEYWORD2
-TurnOnWhenLower	KEYWORD2
-ScheduleIntervalSwitch	KEYWORD2
-TimeIntervalSwitch	KEYWORD2
+Sensor  KEYWORD2
+Device  KEYWORD2
+IntensityControl  KEYWORD2
+BaseLevelSwitch  KEYWORD2
+TurnOnWhenHigher  KEYWORD2
+TurnOnWhenLower  KEYWORD2
+ScheduleIntervalSwitch  KEYWORD2
+TimeIntervalSwitch  KEYWORD2
 
-DS3231_Sensor	KEYWORD2
-AnalogJoystick	KEYWORD2
-DHT11_Sensor	KEYWORD2
+DS3231_Sensor  KEYWORD2
+AnalogJoystick  KEYWORD2
+DHT11_Sensor  KEYWORD2
 
-makeOutputInverted	KEYWORD2
-init	KEYWORD2
-update	KEYWORD2
+makeOutputInverted  KEYWORD2
+init  KEYWORD2
+update  KEYWORD2
 
 #######################################
 # Constants (LITERAL1)
 #######################################
 
-DHT_UPDATE_INTERVAL	LITERAL1
-JOYSTICK_LONG_PRESS_TIMEOUT	LITERAL1
-PIN_MAX_VALUE	LITERAL1
-EveryMonth	LITERAL1
+DHT_UPDATE_INTERVAL  LITERAL1
+JOYSTICK_LONG_PRESS_TIMEOUT  LITERAL1
+PIN_MAX_VALUE  LITERAL1

@@ -2,15 +2,6 @@
 #include "./IntensityControl.h"
 
 
-#define PIN_MAX_VALUE 255
-
-IntensityControl::IntensityControl(
-  unsigned char _pin,
-   unsigned int &_percentage
-   ) :
-    Device(_pin),
-     percentage(_percentage) {};
-
 IntensityControl::IntensityControl(
   unsigned char _pin,
    unsigned int &_percentage,
@@ -20,14 +11,24 @@ IntensityControl::IntensityControl(
       percentage(_percentage),
        rangeStart(_rangeStart) {};
 
-unsigned int IntensityControl::getPinValue() {
-  return (rangeStart + percentage * (100 - rangeStart) / 100) * PIN_MAX_VALUE / 100;
+IntensityControl::IntensityControl(
+  BaseOutput *_output,
+   unsigned char _pin,
+    unsigned int &_percentage,
+     unsigned int _rangeStart
+     ) :
+      Device(_pin),
+       percentage(_percentage),
+        rangeStart(_rangeStart) {};
+
+uint16_t IntensityControl::getPinValue() {
+  return (rangeStart + percentage * (100 - rangeStart) / 100) * output->maxValue / 100;
 }
 
 void IntensityControl::writeToPin() {
-  unsigned char pinValue = isEnabled ? getPinValue() : 0;
+  uint16_t pinValue = isEnabled ? getPinValue() : 0;
 
-  analogWrite(pin, isOutputInverted ? PIN_MAX_VALUE - pinValue : pinValue);
+  output->write(pin, (uint16_t)(isOutputInverted ? output->maxValue - pinValue : pinValue));
 }
 
 void IntensityControl::update() {

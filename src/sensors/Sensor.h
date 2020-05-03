@@ -8,8 +8,8 @@
 class Sensor {
   public:
     bool hasError = false;
-  	virtual void init();
-    virtual void update();
+    virtual void init() = 0;
+    virtual void update() = 0;
 };
 
-#endif;
+#endif

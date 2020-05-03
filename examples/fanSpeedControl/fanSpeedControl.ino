@@ -9,7 +9,7 @@
 #define FAN_PIN 13 // Set your actual pin number
 unsigned int speedPercentage = 50; // Setup demanded value, %
 
-IntensityControl fanSpeedController(FAN_PIN, speedPercentage); // Create device
+IntensityControl fanSpeedController(FAN_PIN, speedPercentage, 0); // Create device
 // To define initial fan speed: at 0% demanded speed will be equal 60% of fan speed, 100% - 100%
 // IntensityControl fanSpeedController(FAN_PIN, speedPercentage, 60);
 

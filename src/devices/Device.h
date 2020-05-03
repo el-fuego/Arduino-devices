@@ -1,21 +1,26 @@
 #ifndef DEVICE_H
 #define DEVICE_H
 
+#include "./outputs/Base.h"
+
 
 /**
 * Base class for internal usage
 **/
 class Device {
   protected:
-  	const unsigned char pin = 13;
-  	bool isOutputInverted = false;
-  	void writeToPin();
+    void writeToPin();
   public:
-  	Device(unsigned char _pin);
-  	void makeOutputInverted();
-  	void init();
-    virtual void update();
+    BaseOutput *output;
+    const unsigned char pin = 13;
+    bool isOutputInverted = false;
     bool isEnabled = false;
+
+    Device(unsigned char _pin);
+    Device(BaseOutput *_output, unsigned char _pin);
+    void makeOutputInverted();
+    void init();
+    virtual void update() = 0;
 };
 
-#endif;
+#endif

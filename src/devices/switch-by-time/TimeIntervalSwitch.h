@@ -20,7 +20,8 @@ class TimeIntervalSwitch: public Device {
     DS3231_Sensor &clockSensor;
   public:
     TimeIntervalSwitch(unsigned char _pin, TimeInterval &_interval, DS3231_Sensor &_clockSensor);
+    TimeIntervalSwitch(BaseOutput *_output, unsigned char _pin, TimeInterval &_interval, DS3231_Sensor &_clockSensor);
     void update();
 };
 
-#endif;
+#endif
