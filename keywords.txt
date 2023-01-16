@@ -17,7 +17,7 @@ BaseLevelSwitch  KEYWORD2
 TurnOnWhenHigher  KEYWORD2
 TurnOnWhenLower  KEYWORD2
 ScheduleIntervalSwitch  KEYWORD2
-TimeIntervalSwitch  KEYWORD2
+ClockTimeIntervalSwitch  KEYWORD2
 
 DS3231_Sensor  KEYWORD2
 AnalogJoystick  KEYWORD2

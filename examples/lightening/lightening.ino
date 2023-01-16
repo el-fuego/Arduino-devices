@@ -1,5 +1,5 @@
 /*
- TimeIntervalSwitch usage example
+ ClockTimeIntervalSwitch usage example
  Will enable lamp by in specific time range
 */
 
@@ -7,10 +7,12 @@
 
 
 #define LAMP_PIN 13 // Set your actual pin number
-TimeInterval lighteningInterval = { 10*60, 18*60 }; // enable from 10AM till 6PM
+// enable from 10AM till 6PM
+unsigned int lighteningFromMinutes = 10*60;
+unsigned int lighteningToMinutes = 18*60;
 
 DS3231_Sensor clock; // Create clock, connected to I2C
-TimeIntervalSwitch lamp(LAMP_PIN, lighteningInterval, clock); // Create device
+ClockTimeIntervalSwitch lamp(LAMP_PIN, lighteningFromMinutes, lighteningToMinutes); // Create device
 
 void setup() {
   clock.init(); // Sensor initialization
@@ -19,5 +21,5 @@ void setup() {
 
 void loop() {
   clock.update(); // Update current time
-  lamp.update(); // Will turn ON your device in lighteningInterval range
+  lamp.update(clock.getIntTime()); // Will turn ON your device in lighteningInterval range
 }

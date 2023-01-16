@@ -52,7 +52,7 @@ ScheduleIntervalSwitch waterPump(WATER_PUMP_PIN, wateringInterval, clock);
 Will put HIGH level to specified pin, for specified time every interval time.\
 Work in pair with clock sensor
 ```cpp
-TimeIntervalSwitch lamp(LAMP_PIN, lighteningInterval, clock);
+ClockTimeIntervalSwitch lamp(LAMP_PIN, lighteningInterval, clock);
 ```
 [full usage example](https://github.com/el-fuego/Arduino-devices/blob/master/examples/lightening/lightening.ino)
 

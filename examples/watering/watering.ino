@@ -7,10 +7,12 @@
 
 
 #define WATER_PUMP_PIN 13 // Set your actual pin number
-ScheduleInterval wateringInterval = { 1, 30 }; // enable for 1 minute every 30 minutes
+// enable for 1 minute every 30 minutes
+unsigned int wateringEnabledForMinutes = 1;
+unsigned int wateringPeriodMinutes = 30;
 
 DS3231_Sensor clock; // Create clock, connected to I2C
-ScheduleIntervalSwitch waterPump(WATER_PUMP_PIN, wateringInterval, clock); // Create device
+ScheduleIntervalSwitch waterPump(WATER_PUMP_PIN, wateringEnabledForMinutes, wateringPeriodMinutes); // Create device
 
 void setup() {
   clock.init(); // Sensor initialization
@@ -19,5 +21,5 @@ void setup() {
 
 void loop() {
   clock.update(); // Update current time
-  waterPump.update(); // Will turn ON|OFF your device, basing on wateringInterval
+  waterPump.update(clock.toEpochMinutes()); // Will turn ON|OFF your device, basing on wateringInterval
 }

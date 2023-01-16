@@ -4,24 +4,24 @@
 
 ScheduleIntervalSwitch::ScheduleIntervalSwitch(
   unsigned char _pin,
-   ScheduleInterval &_interval,
-    DS3231_Sensor &_clockSensor
+   unsigned int &_enableForMinutes,
+   unsigned int &_periodMinutes
     ) : Device(_pin),
-     interval(_interval),
-      clockSensor(_clockSensor) {};
+      enableForMinutes(_enableForMinutes) ,
+      periodMinutes(_periodMinutes) {};
 
 ScheduleIntervalSwitch::ScheduleIntervalSwitch(
   BaseOutput *_output,
    unsigned char _pin,
-    ScheduleInterval &_interval,
-     DS3231_Sensor &_clockSensor
+   unsigned int &_enableForMinutes,
+   unsigned int &_periodMinutes
      ) : Device(_output, _pin),
-      interval(_interval),
-       clockSensor(_clockSensor) {};
+      enableForMinutes(_enableForMinutes) ,
+      periodMinutes(_periodMinutes) {};
     
-void ScheduleIntervalSwitch::update() {
-  unsigned int currentTimeInPeriod = clockSensor.toEpochMinutes() % interval.period;
+void ScheduleIntervalSwitch::update(uint32_t currentEpochMinutes) {
+  unsigned int currentTimeInPeriod = currentEpochMinutes % periodMinutes;
 
-  isEnabled = currentTimeInPeriod < interval.enableFor;
+  isEnabled = currentTimeInPeriod < enableForMinutes;
   writeToPin();
 };

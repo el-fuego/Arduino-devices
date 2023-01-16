@@ -13,7 +13,7 @@
 #include "./devices/switch-by-level/TurnOnWhenLower.h"
 
 #include "./devices/switch-by-time/ScheduleIntervalSwitch.h"
-#include "./devices/switch-by-time/TimeIntervalSwitch.h"
+#include "./devices/switch-by-time/ClockTimeIntervalSwitch.h"
 
 
 #include "./sensors/Sensor.h"

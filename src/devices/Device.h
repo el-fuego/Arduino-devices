@@ -20,7 +20,6 @@ class Device {
     Device(BaseOutput *_output, unsigned char _pin);
     void makeOutputInverted();
     void init();
-    virtual void update() = 0;
 };
 
 #endif
