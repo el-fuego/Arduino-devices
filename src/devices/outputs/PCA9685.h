@@ -7,7 +7,7 @@
 #include "./Base.h"
 
 /**
-* Write value directly to Arduino pin
+* Write value to servo driver used as pin expander
 **/
 class PCA9685_Output: public BaseOutput {
   private:

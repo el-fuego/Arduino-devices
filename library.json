@@ -11,7 +11,7 @@
     "name": "Yuriy Pulyaev",
     "url": "https://github.com/el-fuego"
   },
-  "version": "0.2.2",
+  "version": "0.2.3",
   "frameworks": "arduino",
   "platforms": "*"
 }

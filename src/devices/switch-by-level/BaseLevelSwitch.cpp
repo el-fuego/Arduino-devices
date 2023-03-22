@@ -4,7 +4,7 @@
 
 BaseLevelSwitch::BaseLevelSwitch(
   unsigned char _pin,
-   unsigned int &_demandedValue,
+   unsigned char _demandedValue,
     unsigned char &_currentValue
     ) :
      Device(_pin),
@@ -14,7 +14,7 @@ BaseLevelSwitch::BaseLevelSwitch(
 BaseLevelSwitch::BaseLevelSwitch(
   BaseOutput *_output,
    unsigned char _pin,
-    unsigned int &_demandedValue,
+    unsigned char _demandedValue,
      unsigned char &_currentValue
      ) :
       Device(_output, _pin),
@@ -23,7 +23,7 @@ BaseLevelSwitch::BaseLevelSwitch(
 
 BaseLevelSwitch::BaseLevelSwitch(
   unsigned char _pin,
-   unsigned int &_demandedValue,
+   unsigned char _demandedValue,
     unsigned char &_currentValue,
      const unsigned char _minDifference
      ) :
@@ -35,7 +35,7 @@ BaseLevelSwitch::BaseLevelSwitch(
 BaseLevelSwitch::BaseLevelSwitch(
   BaseOutput *_output,
    unsigned char _pin,
-    unsigned int &_demandedValue,
+    unsigned char _demandedValue,
      unsigned char &_currentValue,
       const unsigned char _minDifference
       ) :
