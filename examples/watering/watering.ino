@@ -4,6 +4,7 @@
 */
 
 #include <Arduino-devices.h>
+#include "devices/switch-by-time/ScheduleIntervalSwitch.h"
 
 
 #define WATER_PUMP_PIN 13 // Set your actual pin number

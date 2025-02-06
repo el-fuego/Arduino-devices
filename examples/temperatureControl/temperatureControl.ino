@@ -4,6 +4,9 @@
 */
 
 #include <Arduino-devices.h>
+#include "sensors/temperature-and-humidity/DHT11.h"
+#include "devices/switch-by-level/TurnOnWhenHigher.h"
+#include "devices/switch-by-level/TurnOnWhenLower.h"
 
 
 #define TEMPERATURE_SENSOR_PIN 2 // Set your actual pin number

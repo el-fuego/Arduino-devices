@@ -4,6 +4,7 @@
 */
 
 #include <Arduino-devices.h>
+#include "devices/switch-by-level/TurnOnWhenLower.h"
 
 
 #define TEMPERATURE_SENSOR_PIN 2 // Set your actual pin number

@@ -4,6 +4,7 @@
 */
 
 #include <Arduino-devices.h>
+#include "devices/analog/IntensityControl.h"
 
 
 #define FAN_PIN 13 // Set your actual pin number
