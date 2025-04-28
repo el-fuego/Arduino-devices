@@ -14,7 +14,9 @@ class DS3231_Sensor: public Sensor {
     void init();
     void update();
     unsigned int getIntTime();
-    uint32_t toEpochMinutes();
+    void setIntTime(unsigned int daysAndMinutes);
+    uint32_t getEpochMinutes();
+    uint32_t toEpochMinutes();  // Deprecated
 };
 
 #endif

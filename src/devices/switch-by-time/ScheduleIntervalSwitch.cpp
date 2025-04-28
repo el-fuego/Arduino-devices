@@ -18,9 +18,9 @@ ScheduleIntervalSwitch::ScheduleIntervalSwitch(
      ) : Device(_output, _pin),
       enableForMinutes(_enableForMinutes) ,
       periodMinutes(_periodMinutes) {};
-    
-void ScheduleIntervalSwitch::update(uint32_t currentEpochMinutes) {
-  unsigned int currentTimeInPeriod = currentEpochMinutes % periodMinutes;
+
+void ScheduleIntervalSwitch::update(unsigned int currentTimeMinutes) {
+  unsigned int currentTimeInPeriod = currentTimeMinutes % periodMinutes;
 
   isEnabled = currentTimeInPeriod < enableForMinutes;
   writeToPin();

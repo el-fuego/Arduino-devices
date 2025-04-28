@@ -14,7 +14,7 @@ class ScheduleIntervalSwitch: public Device {
     unsigned int periodMinutes;
     ScheduleIntervalSwitch(unsigned char _pin, unsigned int &_enableForMinutes, unsigned int &_periodMinutes);
     ScheduleIntervalSwitch(BaseOutput *_output, unsigned char _pin, unsigned int &_enableForMinutes, unsigned int &_periodMinutes);
-    void update(uint32_t currentEpochMinutes);
+    void update(unsigned int currentTimeMinutes);
 };
 
 #endif
